@@ -30,4 +30,4 @@ client.on('ready', () => {
     client.user.setActivity('Making Chicken Dinner');
     
 
-    client.login('NDYxNzQxMjAxMTk3MTA1MTU0.Djqvug._6GX-XC4YCsDxNbe4MTPD96R7Tw');
+    client.login('key');
