@@ -1,6 +1,9 @@
 const Commando = require('discord.js-commando');
 const client = new Commando.Client({
-    owner: '380898001977081858'
+    commandPrefix: '!',
+    unknownCommandResponse: false,
+    owner: '380898001977081858',
+    disableEveryone: true
 });
 const path = require('path');
 const sqlite = require('sqlite');
@@ -10,7 +13,7 @@ client.registry
     // Registers your custom command groups
     .registerGroups([
         ['PUBG', 'PUBG Commands'],
-        ['other', 'Other misc commands']
+        ['Other', 'Other misc commands']
     ])
     // Registers all built-in groups, commands, and argument types
     .registerDefaults()
@@ -20,6 +23,11 @@ client.registry
     client.setProvider(
         sqlite.open(path.join(__dirname, 'settings.sqlite3')).then(db => new Commando.SQLiteProvider(db))
     ).catch(console.error);
+
+
+client.on('ready', () => {
+    console.log('PUBG Bot is live');
+    client.user.setActivity('Making Chicken Dinner');
     
 
     client.login('NDYxNzQxMjAxMTk3MTA1MTU0.Djqvug._6GX-XC4YCsDxNbe4MTPD96R7Tw');
