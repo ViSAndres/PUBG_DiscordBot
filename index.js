@@ -24,4 +24,4 @@ client.on('ready', () => {
     client.user.setActivity("PLAYERUNKNOWN'S BATTLEGROUNDS");
 });
 
-client.login('NDYxNzQxMjAxMTk3MTA1MTU0.Dj7U5w.bkzneDsiteovQS-Sm1wNPbZqLAM');
+client.login('key');
